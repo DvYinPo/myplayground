@@ -5,10 +5,11 @@
  * @return {number}
  * e.g.
  * 'pwkewpp'
- * 'pwpkewpp'
+ * 'pwpewjh'
+ * 'saswpkewpp'
  */
 var lengthOfLongestSubstring = function lengthOfLongestSubstring(s) {
-  var arr = []; // 最大子串栈
+  var arr = ''; // 最大子串栈
 
   var h = ''; // 当前字符
 
@@ -19,23 +20,22 @@ var lengthOfLongestSubstring = function lengthOfLongestSubstring(s) {
     h = s.substr(i, 1);
 
     if (arr.length === 0) {
-      arr.push(h);
+      arr += h;
     } else {
       // eslint-disable-next-line no-restricted-syntax
-      for (var index = 0; index < arr.length; index++) {
-        if (arr[index] === h) {
-          if (MAX < arr.length) {
-            MAX = arr.length;
-          }
+      // eslint-disable-next-line no-lonely-if
+      if (arr.indexOf(h) !== -1) {
+        var left = arr.indexOf(h) + 1;
 
-          arr = [];
-          headIndex += 1;
-          i = headIndex - 1;
+        if (MAX < arr.length) {
+          MAX = arr.length;
         }
-      }
 
-      if (arr.length !== 0) {
-        arr.push(h);
+        arr = '';
+        headIndex += left;
+        i = headIndex - 1;
+      } else {
+        arr += h;
       }
     }
   }
