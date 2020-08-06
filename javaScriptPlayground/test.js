@@ -1,7 +1,9 @@
-fetch('http://example.com/movies.json')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    console.log(myJson);
-  });
+async function f() {
+  await setTimeout(() => {
+    console.log('这是第一个await');
+  }, 2000);
+  await setTimeout(() => {
+    console.log('这是第二个await');
+  }, 1000);
+}
+f();

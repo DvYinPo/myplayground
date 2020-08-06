@@ -8,7 +8,6 @@ var maxArea = function (height) {
   var MAX = 0;
 
   if (height.length === 0) return 0;
-  debugger
   while (headIndex < tailIndex) {
     let h = 0;
     if (height[headIndex] >= height[tailIndex]) { // 尾指针比头指针矮
@@ -39,5 +38,3 @@ var maxArea = function (height) {
   }
   return MAX;
 };
-
-maxArea([2, 3, 4, 5, 18, 17, 6]);
