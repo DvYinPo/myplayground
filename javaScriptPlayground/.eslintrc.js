@@ -16,5 +16,6 @@ module.exports = {
     'no-unused-vars': ['off'],
     'no-plusplus': ['off'],
     'no-var': ['off'],
+    'func-names': ['off'],
   },
 };
