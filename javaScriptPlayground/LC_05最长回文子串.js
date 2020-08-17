@@ -2,10 +2,6 @@
  * @param {string} s
  * @return {string}
  * dynamic planning
- * 'baab'
- * "babad"
- * 'bcaaacbaabd'
- * 'abbbb'
  */
 var longestPalindrome = function (s) {
   const dp = [];
