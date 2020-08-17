@@ -1,8 +1,14 @@
-const a = 'https://cj.wuyang-honda.com:7700/wuyang/luckDraw/luck_draw.html?c=6964&t=1597374627306&ISales=admin&ActivityId=544&Province=&Type=2&drawId=1025';
-
-const b = a;
-
-console.log(b);
-function getValue() {
-  return b;
+function f() {
+  (async () => {
+    await setTimeout(() => {
+      console.log('这是第一个await');
+    }, 2000);
+    await setTimeout(() => {
+      console.log('这是第二个await');
+    }, 1000);
+    console.log('这是一个console！');
+    return '这是内部return';
+  })();
+  return '这是外部return！';
 }
+console.log(f());
