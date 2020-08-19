@@ -17,5 +17,7 @@ module.exports = {
     'no-plusplus': ['off'],
     'no-var': ['off'],
     'func-names': ['off'],
+    'max-len': ['off'],
+    'no-continue': ['off'],
   },
 };
